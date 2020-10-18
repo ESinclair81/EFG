@@ -68,12 +68,30 @@
                 </div>
             </nav>
             </div>
+            <!-- Start Hero Carousel -->
+		<section class="hero is-medium has-carousel">
+			<div id="carousel-demo" class="hero-carousel">
+				<div class="item-1">
+					<!-- Slide Content -->
+				</div>
+				<div class="item-2">
+					<!-- Slide Content -->
+				</div>
+				<div class="item-3">
+					<!-- Slide Content -->
+				</div>
+			</div>
+			<div class="hero-head"></div>
+			<div class="hero-body"></div>
+			<div class="hero-foot"></div>
+		</section>
+		<!-- End Hero Carousel -->
 
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <div class="column is-6 is-offset-3">
                         <h1 class="title">
-                            Coming Soon
+                            What's For Dinner?
                         </h1>
                         <h2 class="subtitle">
                             $this is the best software platform for running an internet business. We handle billions of dollars every year for forward-thinking businesses around the world.
@@ -90,12 +108,67 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
+
+                <!-- This is the dropdown types of food menu -->
+ 
+                          <div class="dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                <span>Know What You Want?</span>
+                                <span class="icon is-small">
+                                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                              </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu1" role="menu">
+                              <div class="dropdown-content">
+                               <div class="dropdown-item">
+                                        <a href="#" class="dropdown-item">
+                                          American
+                                        </a>
+                                        </div>
+                                        <hr class="dropdown-divider">
+                                        <div class="dropdown-item">
+                                            <a href="#" class="dropdown-item">n
+                                            </a>
+                                            </div>
+                                            <hr class="dropdown-divider"></div>
+                                            <div class="dropdown-item">
+                                                <a href="#" class="dropdown-item">
+                                                  American
+                                                </a>
+                                                </div>
+                                                <hr class="dropdown-divider"></div>
+                                                <div class="dropdown-item">
+                                                    <a href="#" class="dropdown-item">
+                                                      American
+                                                    </a>
+                                                    </div>
+                                                    <hr class="dropdown-divider"></div>
+                                                    <div class="dropdown-item">
+                                                        <a href="#" class="dropdown-item">
+                                                          American
+                                                        </a>
+                                                        </div>
+                                                        <hr class="dropdown-divider"></div>
+                                                        <div class="dropdown-item">
+                                                            <a href="#" class="dropdown-item">
+                                                              American
+                                                            </a>
+                                                            </div>
+                                                            <hr class="dropdown-divider"></div>
                 </div>
             </div>
 
     </section>
     <script async type="text/javascript" src="../js/bulma.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+		<script>
+			bulmaCarousel.attach('#carousel-demo', {
+				slidesToScroll: 1,
+				slidesToShow: 4
+			});
+		</script>
 </body>
 
 </html>
