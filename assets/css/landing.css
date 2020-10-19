@@ -9,7 +9,7 @@ html,body {
       position: relative;
       z-index: 0; }
       .hero-area .hero-slides .single-hero-slide {
-        height: 800px;
+        height: 1500px;
         max-width: 100%;
         position: relative;
         z-index: 0;
@@ -25,7 +25,8 @@ html,body {
             height: 400px; } }
     .hero-area .hero-post-area {
       position: absolute;
-      bottom: 40px;
+      top: 0px;
+      bottom: 0px;
       left: 0;
       width: 100%;
       z-index: 200; }
@@ -82,4 +83,11 @@ html,body {
     line-height: 1.5;
   }
 
+.card {
+  opacity: 0.8;
+  border-radius: 20px;
+}
 
+.modal-button {
+  border-radius: 20px;
+}

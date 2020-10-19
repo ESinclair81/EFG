@@ -48,6 +48,25 @@
             animateIn: 'fadeIn',
             animateOut: 'fadeOut'
         });
+
+        $('.hero-post-slide').owlCarousel({
+            items: 3,
+            margin: 30,
+            loop: true,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 3500, // Autoplay Timeout 1s = 1000ms
+            smartSpeed: 1000,
+            center: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 3
+                }
+            }
+        });
     }
 
     // :: Gallery Menu Style Active Code
