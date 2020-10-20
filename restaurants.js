@@ -1,11 +1,25 @@
+// Bing Api Keys //
+// Key 1: e6c90e01716f4732990ada5d1d36135f //
+// Key 2: 83053145b30b47758e84cf33f79ec254 //
+
+//Zomato API KEY
+//KEY: 211a37c27d46db44c2e65076d081b87b
+
+//Google Maps Api Key //
+// Key : AIzaSyDHWqTqHS4iUxPTAddHwqSOOHJ4XDGO0qc //
+
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
 
 // This is the Owl Carousel Function //
+
 $(document).ready(function(){
 	$(".owl-carousel").owlCarousel();
   });
 
+
 // This is the geolocator for restaurants nearest you //
-  var x = document.getElementById("demo");
+  var x = document.getElementById("searchBtn");
 
 function getLocation() {
   if (navigator.geolocation) {
@@ -25,23 +39,21 @@ function showPosition(position) {
 function showPosition(position) {
   var latlon = position.coords.latitude + "," + position.coords.longitude;
 
-  var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=
-  "+latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_KEY";
+  var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_KEY";
 
   document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
 }
 
+//This is the Zomato Search Function //
 
-  // Create a request variable and assign a new fetch object to it.
-var request = new XMLHttpRequest()
+$(document).ready(function() {
 
-// Open a new connection, using the GET request on the URL endpoint
-request.open('GET', 'https://ghibliapi.herokuapp.com/films', true)
-
-request.onload = function () {
-  // Begin accessing JSON data here
-
-}
-
-// Send request
-request.send()
+  $("#getMessage").on("click", function() {
+   var valueSearchBox = $('#getText').val()
+   if (valueSearchBox === "") {
+    return;
+   }
+   select();
+  });
+  // SEARCH BY CITY 
+ 
