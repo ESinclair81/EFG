@@ -8,13 +8,39 @@
 //Google Maps Api Key //
 // Key : AIzaSyDHWqTqHS4iUxPTAddHwqSOOHJ4XDGO0qc //
 
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel';
-
 // This is the Owl Carousel Function //
 
 $(document).ready(function(){
-	$(".owl-carousel").owlCarousel();
+  $(".owl-carousel").owlCarousel({
+  slideTransition:"linear",
+  loop:true,
+  autoplay:true,
+  center:true,
+  stagePadding: 10,
+  margin:10,
+  nav:false,
+  items:1,
+  merge:true,
+  pullDrag:true,
+  mergeFit:true,
+  videoHeight:60,
+  videoWidth:100,
+
+
+  
+
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:5
+      }
+  }
+})
   });
 
 
@@ -56,4 +82,4 @@ $(document).ready(function() {
    select();
   });
   // SEARCH BY CITY 
- 
+});

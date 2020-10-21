@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <!-- Bulma Version 0.9.0-->
-    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" /> -->
+    <link  rel="stylesheet" href="assets/css/bulma.min.css">
     <!-- Bulma Template -->
     <link rel="stylesheet" type="text/css" href="../css/landing.css">
     <!-- Owl Carousel -->
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css"> 
+    <link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/dist/assets/owl.theme.default.min.css"> 
     <!-- Bulma SCSS Styles -->  
     <link rel="stylesheet" href="/assets/scss/style.scss" >
 </head>
@@ -99,7 +100,7 @@
         <!-- THIS IS THE OWL CAROUSEL OF FOOD PICS-->
 			<div class="container">
 				<!-- Start Carousel -->
-				<div id= "owl-carousel" class="owl-carousel owl-theme">
+				<div id= "owl-carousel" class="owl-carousel owl-theme" loop= true autoplay= true >
 					<div class="item-1">
                         <img class="Carousel-img" src="/assets/images/foodiesfeed.com_barbecued-roasted-duck-ramen.jpg">
 					</div>
@@ -226,8 +227,8 @@
 
     </section>
     <script async type="text/javascript" src="../js/bulma.js"></script>
-    <script src="jquery.min.js"></script>
-    <script src="owlcarousel/owl.carousel.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="owlcarousel/dist/owl.carousel.min.js"></script> 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHWqTqHS4iUxPTAddHwqSOOHJ4XDGO0qc&callback=initMap"
     type="text/javascript"></script>
     <script src="./restaurants.js"></script>
