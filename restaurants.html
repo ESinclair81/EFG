@@ -5,32 +5,27 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>What's Poppin</title>
-    <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+    <title>What's Poppin- Dinner</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Dosis:wght@700&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
     <!-- Bulma Version 0.9.0-->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" /> -->
-    <link  rel="stylesheet" href="assets/css/bulma.min.css">
-    <!-- Bulma Template -->
-    <link rel="stylesheet" type="text/css" href="../css/landing.css">
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <!--link rel="stylesheet" href="assets/css/styles2.css">-->
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="owlcarousel/dist/assets/owl.theme.default.min.css"> 
-    <!-- Bulma SCSS Styles -->  
-    <link rel="stylesheet" href="/assets/scss/style.scss" >
+
 </head>
 
 <body>
     <section class="hero is-info is-fullheight">
         <div class="hero-head">
-
-    <!-- THIS IS THE NAV BAR - CHECK FOR ICONS-->
             <nav class="navbar">
                 <div class="container">
                     <div class="navbar-brand">
-    <!-- THIS IS THE BULMA LOGO PART OF NAV BAR-->
-                      
+                        <a class="navbar-item" href="../">
+                        </a>
                         <span class="navbar-burger burger" data-target="navbarMenu">
                             <span></span>
                             <span></span>
@@ -38,9 +33,9 @@
                         </span>
                     </div>
                     <div id="navbarMenu" class="navbar-menu">
-                        <div class="navbar is-centered">
+                        <div class="navbar-end">
                             <span class="navbar-item">
-                                <a class="button is-white is-outlined" href="#">
+                                <a class="button is-white is-outlined is-hoverable" href="#">
                                     <span class="icon">
                                         <i class="fa fa-home"></i>
                                     </span>
@@ -48,62 +43,49 @@
                                 </a>
                             </span>
                             <span class="navbar-item">
-                                <a class="button is-white is-outlined" href="#">
+                                <a class="button is-white is-outlined is-hoverable" href="#">
                                     <span class="icon">
                                         <i class="fa fa-superpowers"></i>
+                                    </span>
+                                    <span>News</span>
+                                </a>
+                            </span>
+                            <span class="navbar-item">
+                                <a class="button is-white is-outlined is-hoverable" href="#">
+                                    <span class="icon">
+                                        <i class="fa fa-book"></i>
                                     </span>
                                     <span>Movies</span>
                                 </a>
                             </span>
+                            </span>
                             <span class="navbar-item">
-                                <a class="button is-white is-outlined" href="#">
+                                <a class="button is-white is-outlined is-hoverable" href="#">
                                     <span class="icon">
                                         <i class="fa fa-book"></i>
                                     </span>
                                     <span>Dinner</span>
                                 </a>
                             </span>
-                            <span class="navbar-item">
-                                <a class="button is-white is-outlined" href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/landing.html">
-                                    <span class="icon">
-                                        <i class="fa fa-github"></i>
                                     </span>
-                                    <span>About</span>
-                               </a>
-                            </span>
-                             <span class="navbar-item">
-                                <a class="button is-white is-outlined" href="#">
-                                    <span class="icon">
-                                       <i class="fa fa-book"></i>
-                                   </span>
-                                   <span>Register</span>
+                                    <span></span>
                                 </a>
-                             </span>
-                             <span class="navbar-item">
-                                <a class="button is-white is-outlined" href="#">
-                                     <span class="icon">
-                                       <i class="fa fa-book"></i>
-                                      </span>
-                                  <span>Contact</span>
-                               </a>
+                            </span>
                         </div>
                     </div>
                 </div>
             </nav>
             </div>
+
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <div class="column is-6 is-offset-3">
                         <h1 class="title">
                             What's A Movie Without Dinner?
-                        </h1>
-        <!-- THIS IS THE OWL CAROUSEL OF FOOD PICS-->
+                        <!-- THIS IS THE OWL CAROUSEL OF FOOD PICS-->
 			<div class="container">
 				<!-- Start Carousel -->
 				<div id= "owl-carousel" class="owl-carousel owl-theme" loop= true autoplay= true >
-					<div class="item-1">
-                        <img class="Carousel-img" src="/assets/images/foodiesfeed.com_barbecued-roasted-duck-ramen.jpg">
-					</div>
 					<div class="item-2">
 						<img class="Carousel-img" src="assets/images/foodiesfeed.com_fancy-dinner-with-seafood-pasta-and-crayfish.jpg">
 					</div>
@@ -150,83 +132,41 @@
                         <div class="box">
                             <div class="field is-grouped">
                                 <p class="control is-expanded">
-                                    <input class="input" type="text" placeholder="Know What You Want to Eat? Find It Here!">
+                                    <input class="search-box" type="text" autofocus="true" placeholder="Type Cuisine and Hit Enter">
                                 </p>
                             </div>
                         </div>
 
-                <!-- This is the dropdown types of food menu -->
- 
-                          <div class="dropdown is-hoverable">
-                            <div class="dropdown-trigger">
-                              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                                <span>Need Cusine Suggestions?
-                                Click Here!</span>
-                                <span class="icon is-small">
-                                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                              </button>
+                        <div class="box">
+                            <div class="field is-grouped">                               
+                                <p class="control is-expanded">
+                                    <a class="button is-info is large">
+                                        Click Here For the Top 10 Restaurants Near You
+                                    </a>
+                                </p>
                             </div>
-                            <div> 
-                                <button class = "button" onclick="getLocation()">Click Here For Restaurants Near You Right Now!</button>
-                                    <p id="searchBtn"></p>
-                            </div>
-                            <div class="dropdown-menu" id="dropdown-menu1" role="menu">
-                              <div class="dropdown-content">
-                               <div class="dropdown-item">
-                                        <a href="#" class="dropdown-item">
-                                             American
-                                        </a>
-                                    <hr class="dropdown-divider">
-                                <div class="dropdown-item">
-                                        <a href="#" class="dropdown-item">
-                                             Chinese
-                                        </a>
-                                    <hr class="dropdown-divider">                               
-                             <div class="dropdown-item">
-                                      <a href="#" class="dropdown-item">
-                                             French
-                                         </a>
-                                     <hr class="dropdown-divider">
-                             <div class="dropdown-item">
-                                      <a href="#" class="dropdown-item">
-                                            Greek
-                                         </a>
-                                     <hr class="dropdown-divider">
-                              <div class="dropdown-item">
-                                        <a href="#" class="dropdown-item">
-                                            Indian
-                                           </a>
-                                   <hr class="dropdown-divider">
-                             <div class="dropdown-item">
-                                    <a href="#" class="dropdown-item">
-                                            Italian
-                                       </a>
-                                   <hr class="dropdown-divider">
-                            <div class="dropdown-item">
-                                    <a href="#" class="dropdown-item">
-                                            Japanese
-                                       </a>
-                                   <hr class="dropdown-divider">
-                             <div class="dropdown-item">
-                                    <a href="#" class="dropdown-item">
-                                            Mediterranean
-                                       </a>
-                                   <hr class="dropdown-divider">
-                             <div class="dropdown-item">
-                                    <a href="#" class="dropdown-item">
-                                            Mexican
-                                       </a>
-                                   <hr class="dropdown-divider">
-                             <div class="dropdown-item">
-                                     <a href="#" class="dropdown-item">
-                                            Thai
-                                       </a>
+                        </div>
+                        <!-- BUTTON FOR LOCATION -->
+                        <div> 
+                            <button class = "button" onclick="getLocation()">Click Here For Restaurants Near You Right Now!</button>
+                                <p id="searchBtn"></p>
+                        </div>
+                        <!-- this div holds the map -->
+                        <div id="map">  
+
+
+                        </div>
+
+                        <!-- this div holds  restaurant info -->
+                        <div id="info_div">
+
+
+                        </div>
+                    </div>
                 </div>
             </div>
 
     </section>
-    <script async type="text/javascript" src="../js/bulma.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="owlcarousel/dist/owl.carousel.min.js"></script> 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHWqTqHS4iUxPTAddHwqSOOHJ4XDGO0qc&callback=initMap"
