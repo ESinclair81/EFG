@@ -41,6 +41,7 @@ var highlight2 = document.querySelector("#news-highlight2");
 var highlight3 = document.querySelector("#news-highlight3");
 var highlight4 = document.querySelector("#news-highlight4");
 var api =  "feec356023msh7d505f582747ea5p199c91jsnd5a1909fc40a";
+var ticketMasterApi = "EI6xvZtsgVpRYLMPIJKeFhxH3ma5tsgl";
 
 
 var displayArticle = function(search_term) {
@@ -151,4 +152,15 @@ var getNews = function() {
     })
 };
 
+// fetch("https://developers.zomato.com/api/v2.1/categories", {
+//     "method": "GET",
+//         "headers": {
+//             "user-key": "4726b7bb9adff2236c9285afdf21b5e2"}
+//         }).then(function(response) {
+//     response.json().then(function(data) {
+//         console.log(data)
+//     })
+// });
+
 getNews();
+
