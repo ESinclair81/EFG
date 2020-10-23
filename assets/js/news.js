@@ -117,7 +117,7 @@ var displayHighlight = function(search_term) {
 };
 
 var getNews = function() {
-    var apiUrl = fetch("https://rapidapi.p.rapidapi.com/apirapid/news/world/?q=news", {
+    var apiUrl = fetch("https://rapidapi.p.rapidapi.com/apirapid/news/?q=news", {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "newscafapi.p.rapidapi.com",
