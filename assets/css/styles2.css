@@ -1,6 +1,7 @@
 /* Bulma Styles */
 
 *, ::after, ::before {
+
     box-sizing: inherit;
 }
 
@@ -32,46 +33,154 @@
     color: red;
 }
 
-.container {
+/*.container {
     padding: 10px;
-}
+}*/
 
 input {
         height:40px;
-        width: 400px;
+        width: 1000px;
         font-size: 14pt;
         align-content: center;
         display: flex;
+        justify-items: center;
     }
 
+button {
+
+background-color: lightblue;
+}
 
 html, body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 body {
-    color: #4a4a4a;
+    color: black;
     font-size: 1em;
     font-weight: 400;
     line-height: 1.5;
 }
 
-body, button, input, select, textarea {
+body, button select, textarea {
     font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-button is-info {
-    color: #4a4a4a;
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 1.5;
+/* OWL CAROUSEL STYLES */
+:root {
+    --main-white-color: white;
+    --main-black-color: black;
+  }
+   
+  .static {
+    position: static; 
+  }
+   
+  .cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
+  .owl-carousel .owl-slide {
+    position: relative;
+    height: 100vh;
+    background-color: lightgray;
+  }
+   
+  .owl-carousel .owl-slide-animated {
+    transform: translateX(20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.05s;
+  }
+   
+  .owl-carousel .owl-slide-animated.is-transitioned {
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s;
+  }
+   
+  .owl-carousel .owl-slide-title.is-transitioned {
+    transition-delay: 0.2s;
+  }
+   
+  .owl-carousel .owl-slide-subtitle.is-transitioned {
+    transition-delay: 0.35s;
+  }
+   
+  .owl-carousel .owl-slide-cta.is-transitioned {
+    transition-delay: 0.5s;
+  }
+
+  .owl-carousel .owl-dots,
+.owl-carousel .owl-nav {
+  position: absolute;
+}
+ 
+.owl-carousel .owl-dots .owl-dot span {
+  background: transparent;
+  border: 1px solid var(--main-black-color);
+  transition: all 0.2s ease;
+}
+ 
+.owl-carousel .owl-dots .owl-dot:hover span,
+.owl-carousel .owl-dots .owl-dot.active span {
+  background: var(--main-black-color);
+}
+ 
+.owl-carousel .owl-nav {
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  margin: 0;
 }
 
+/* Prevent Page Jumping */
+section {
+    display: none;
+  }
+
+  #owl-demo .item{
+    margin: 3px;
+  }
+  #owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 
 /* Google Maps Map- needs width and height to appear */
-map {
-	width: 900px;
-	max-width: 100%;
-	height: 500px;
-}
+
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #map {
+        height: 100%;
+      }
+      
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .custom-map-control-button {
+        appearance: button;
+        background-color: #fff;
+        border: 0;
+        border-radius: 2px;
+        box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        margin: 10px;
+        padding: 0 0.5em;
+        height: 40px;
+        font: 400 18px Roboto, Arial, sans-serif;
+        overflow: hidden;
+      }
+      .custom-map-control-button:hover {
+        background: #ebebeb;
+      }
+      
