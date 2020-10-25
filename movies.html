@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
-    
+    <link rel="stylesheet" href="assets/css/style.css"/>
   </head>
 
   <section class="hero is-medium">
@@ -41,22 +41,18 @@
               <a class="navbar-item" href="help.html">
                 Help
               </a>
-              <a class="navbar-item" href="assets/js/cinemasnear.js">
-              Cinemas Near Me</a>
-            </div>
-
             </div>
           </div>
         </nav>
       </div>
     </div>
     <div class="hero-body">
+      <h1 class="subtitle has-text-centered bold" >
+        Check Out Whats Playing!
+      </h1>
       <div class="container has-text-centered">
-        <img src="./assets/images/movies.jpg" width="600">
-        <h2 class="subtitle">
-          Check Out Whats Playing!
-        </h2>
-      </div>
+        <img src="./assets/images/horrormovies.jpg">
+        </div>
     </div>
   </section>
   <section class="blog-posts">
@@ -64,7 +60,7 @@
       <div class="columns">
         <div class="column is-10 is-offset-1">
           <div class="columns featured-post is-multiline">
-            <div class="column is-12 post">
+            <div class="column is-12 ">
               <article class="columns featured">
                   <div class="card column is-6"  id="playing">
                     <div class="card-content">
@@ -74,29 +70,39 @@
                       <ul id="content"></ul>
                     </div> 
                 </div>
-                <div class="column is-6 featured-content ">
-                  <label class="movie-label" for="moviename">Movie Name</label>
-                  <input class="input is-rounded" id="movie-search" type="text" placeholder="Search Movie">
-                  <br>
-                  <a href="#" class="button is-primary">Search</a>
+                <div class="card column is-6 featured-content ">
+                  <div>
+                    <h1 class="title post-title">Cinemas Near By:<span id="moive-search-term"></span></h1>
+                    <div class="movie-container" class="list-group">
+                      <ul id="cinemas" class="list">
+  
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </article>
             </div>
-          </div>
               <hr>
-            <div class="columns is-multiline">
-              <div class="column is-5 featured-content va">
-                <div>
-                  <h1 class="title post-title">Showing Cinemas Playing Movie:<span id="moive-search-term"></span></h1>
-                  <div class="movie-container" class="list-group"></div>
+            <div class="column is-12">
+              <div class="column is-6">
+                 <form id="searchform">
+                  <label class="movie-label" for="movie-search">Movie Name</label>
+                  <input class="input is-rounded" id="movie-search" type="text" placeholder="Search Movie">
+                  <button class="button is-primary" type="submit">Submit</button>
+                 </form> 
+              </div>
+              <div class="columns is-multiline">
+                <div class="column is-6 featured-content va">
+                <ul id="showtimes"></ul>
                 </div>
               </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="column is-12" id="cinemasPlaying"></div>
+   
 
   </section>
 
