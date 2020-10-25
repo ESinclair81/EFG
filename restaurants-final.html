@@ -114,31 +114,68 @@
                               <div class="box has-background-info-light has-text-primary is-size-4">
                                   <div class="field is-grouped">
                                       <p class="control is-expanded">
-                                          <input class="search-box input is-medium is-info has-background-primary-light has-text-info" type="text" autofocus="true" placeholder="Write A Type of Cuisine and Press Enter"><i class="fas fa-hamburger fa-3x has-text-warning"></i>
+                                          <input class="search-box input is-medium is-info has-background-primary-light has-text-info" id="cuisine-search" type="text" autofocus="true" placeholder="Write A Type of Cuisine and Press Enter"><i class="fas fa-hamburger fa-3x has-text-warning"></i>
                                       </p>
                                   </div>
                                   <!-- THIS IS THE MAP LOCATOR -->
 
                                     <h1>SO CLOSE, YOU CAN TASTE IT!</h1>
                                   
-                                    <form id="geocoding_form" class="form-horizontal">
+                                    <form id="search-form" class="form-horizontal">
                                       <div class="form-group">
                                         <div class="col-xs-12 col-md-6 col-md-offset-3">
-                                          <button id="searchBtn" class="button is-primary btn-info btn-block"
-                                          onclick="getLocation()">RESTAURANTS NEAR ME</button>
+                                          <button id="searchBtn" class="button is-primary btn-info btn-block" type="submit">RESTAURANTS NEAR ME</button>
                                         </div>
                                       </div>
                                     </form>
-                                  
-                                    <p class="no-browser-support">Sorry, the Geolocation API isn't supported in Your browser.</p>
-                                    <p class="coordinates">Latitude: <b class="latitude">42</b> Longitude: <b class="longitude">32</b></p>
-                                  
-                                    <div class="map-overlay">
-                                      <div id="map"></div>
-                                    </div>
-                                  
                                   </div>
-                              </div>
+                                  <!-- LOADED CONTENT    -->
+                                  <div class="tile is-ancestor">
+                                    <div class="tile is-vertical is-8">
+                                      <div class="tile">
+                                        <div class="tile is-parent is-vertical">
+                                          <article class="tile is-child notification is-primary">
+                                            <p class="title" id="rest1"></p>
+                                            <p class="subtitle">id="</p>
+                                            <figure class="image is-4by3">
+                                              <img src="https://bulma.io/images/placeholders/640x480.png">
+                                            </figure>
+                                            <p> Whattup </p>
+                                          </article>
+                                        </div>
+                                        <div class="tile is-parent">
+                                          <article class="tile is-child notification is-info">
+                                            <p class="title">Middle tile</p>
+                                            <p class="subtitle">With an image</p>
+                                            <figure class="image is-4by3">
+                                              <img src="https://bulma.io/images/placeholders/640x480.png">
+                                            </figure>
+                                          </article>
+                                        </div>
+                                      </div>
+                                      <div class="tile is-parent">
+                                        <article class="tile is-child notification is-danger">
+                                          <p class="title">Wide tile</p>
+                                          <p class="subtitle">Aligned with the right tile</p>
+                                          <div class="content">
+                                            <!-- Content -->
+                                          </div>
+                                        </article>
+                                      </div>
+                                    </div>
+                                    <div class="tile is-parent">
+                                      <article class="tile is-child notification is-success">
+                                        <div class="content">
+                                          <p class="title">Tall tile</p>
+                                          <p class="subtitle">With even more content</p>
+                                          <div class="content">
+                                            <!-- Content -->
+                                          </div>
+                                        </div>
+                                      </article>
+                                    </div>
+                                  </div>                                
+                                </div>
                 </div>
             </div>
         </section>
@@ -151,6 +188,6 @@
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="owlcarousel/dist/owl.carousel.min.js"></script> 
-<script src="./restaurants.js"></script>
+<script src="./assets/js/functionality.js"></script>
 </body>
 </html>

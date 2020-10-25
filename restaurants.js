@@ -68,9 +68,6 @@ $owlCarousel.on("changed.owl.carousel", e => {
   $currentOwlItem.find(".owl-slide-animated").addClass("is-transitioned");
 });
 
-// Prevent Page Jumping Function //
-
-
 // Browser Sizing for Carousel //
 $owlCarousel.on("resize.owl.carousel", () => {
   setTimeout(() => {
@@ -89,17 +86,17 @@ function setQuery(evt) {
       //console.log(searchbox.value);
   }
 
-// //FUNCTION TO FETCH ZOMATO API //
-// function getResults (query) {
-//   fetch(`${api.base}/cuisine?q=${query}&APPID=${api.key}`)
-//   .then(cuisine => {
-//       return cuisine.json();
-//       }).then(displayResults);  
-//   }
-// //DISPLAY ZOMATO API RESULTS //
-// function displayResults (cuisine) {
-//   console.log(cuisine);
-// }
+//FUNCTION TO FETCH ZOMATO API //
+function getResults (query) {
+  fetch(`${api.base}/cuisine?q=${query}&APPID=${api.key}`)
+  .then(cuisine => {
+      return cuisine.json();
+      }).then(displayResults);  
+  }
+//DISPLAY ZOMATO API RESULTS //
+function displayResults (cuisine) {
+  console.log(cuisine);
+}
 
 // // THIS FUNCTION IS THE GEOLOCATOR FOR RESTAURANTS (RESTOS) NEAREST YOU //
 // let map, infoWindow;
