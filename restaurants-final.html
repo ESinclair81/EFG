@@ -15,54 +15,49 @@
     <header>
 <!--------------------------------------------------- THIS IS THE NAVBAR --------------------------------------------------->      
         <section class="has-background-primary-light">
-            <nav class="navbar has-background-primary navbar-end" role="navigation" aria-label="main navigation">
-                <div class="navbar-brand">
-                  <a class="navbar-item" href="https://bulma.io">
-                    <img src="" alt="" width="112" height="28">
-                  </a>
-                  <span class="navbar-item">
-                    <a class="button is-white is-outlined is-hoverable" href="#">
-                        <span class="icon">
-                            <i class="fa fa-home"></i>
-                        </span>
-                        <span>Home</span>
-                    </a>
-                </span>
-                <span class="navbar-item">
-                    <a class="button is-white is-outlined is-hoverable" href="#">
-                        <span class="icon">
-                            <i class="fa fa-superpowers"></i>
-                        </span>
-                        <span>News</span>
-                    </a>
-                </span>
-                <span class="navbar-item">
-                    <a class="button is-white is-outlined is-hoverable" href="#">
-                        <span class="icon">
-                            <i class="fa fa-book"></i>
-                        </span>
-                        <span>Movies</span>
-                    </a>
-                </span>
-                </span>
-                <span class="navbar-item">
-                    <a class="button is-white is-outlined is-hoverable" href="#">
-                        <span class="icon">
-                            <i class="fa fa-book"></i>
-                        </span>
-                        <span>Dinner</span>
-                    </a>
-                </span>
-                        </span>
-                        <span></span>
-                    </a>
-                </span>
-                  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                  </a>
-                </div>
+          <div class="column is-full">
+            <nav class="is-grouped" role="navigation" aria-label="main navigation">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html"><img src="./assets/img/logo3.png" alt="Logo"></a>
+                <!-- Navbar Toggler -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#worldNav" aria-controls="worldNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <!-- Navbar -->
+                <div class="collapse navbar-collapse" id="worldNav">
+                    <ul class="navbar ">
+                        <li class="navbar-item">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="index.html">Home</a>
+                                <a class="dropdown-item" href="catagory.html">Catagory</a>
+                                <a class="dropdown-item" href="single-blog.html">Single Blog</a>
+                                <a class="dropdown-item" href="regular-page.html">Regular Page</a>
+                                <a class="dropdown-item" href="contact.html">Contact</a>
+                            </div>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link" href="#">Gadgets</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link" href="#">Lifestyle</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link" href="#">Video</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- Search Form  -->
+                    <div id="search-wrapper" class="navbar-item navbar-end">
+                        <form action="#" >
+                            <input type="text" id="search" placeholder="Search something...">
+                            <div id="close-icon"></div>
+                            <input class="d-none" type="submit" value="">
+                        </form>
+                    </div>
               </nav>
             
 <!------------------------------------------------- THIS IS THE OWL CAROUSEL ------------------------------------------------>
@@ -138,15 +133,15 @@
                                 <div class="tile is-ancestor">
                                     <div class="tile is-vertical">
                                       <div class="tile">
-                                        <div class="tile is-parent is-vertical">
+                                        <div class="tile is-parent" id="tile-1">
                                           <article class="tile is-child notification is-info">
-                                            <p class="title" id="restName1"></p>
-                                            <p class="subtitle" id="rate1"></p>
-                                            <a class="phone1" img alt="" id="img1"></a>
-                                            <p class="subtitle" id= "addy1" ></p>
+                                            <p class="title" id="rest-name1"></p>
+                                            <p class="subtitle" id="user-rate1"></p>
+                                            <a class="rest-phone1" img alt="" id="feat-img1"></a>
+                                            <p class="subtitle" id= "rest-addy1" ></p>
                                           </article>                                        
                                         </div>
-                                        <div class="tile is-parent">
+                                        <div class="tile is-parent" id= "tile-2">
                                           <article class="tile is-child notification is-info">
                                             <p class="title">Middle tile</p>
                                             <p class="subtitle">With an image</p>
@@ -155,7 +150,7 @@
                                             </figure>
                                           </article>
                                         </div>
-                                      <div class="tile is-parent">
+                                      <div class="tile is-parent" id="tile-3">
                                         <article class="tile is-child notification is-info">
                                           <p class="title">Middle tile</p>
                                           <p class="subtitle">With an image</p>
@@ -164,7 +159,7 @@
                                           </figure>
                                         </article>                                      
                                     </div>
-                                    <div class="tile is-parent">
+                                    <div class="tile is-parent" id="tile-4">
                                       <article class="tile is-child notification is-info">
                                         <p class="title">Middle tile</p>
                                         <p class="subtitle">With an image</p>
@@ -173,7 +168,7 @@
                                         </figure>
                                       </article>
                                     </div>
-                                    <div class="tile is-parent">
+                                    <div class="tile is-parent" id="tile-5">
                                       <article class="tile is-child notification is-info">
                                         <p class="title">Middle tile</p>
                                         <p class="subtitle">With an image</p>

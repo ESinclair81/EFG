@@ -1,22 +1,28 @@
 var search = document.querySelector('#cuisine-search');
 var searchBtnEl = document.querySelector('#search-form');
 
-var restName1
-var rate1 
-var phone1
-var img1
+var restName1 = document.querySelector("#rest-name1");
+var userRate1 = document.querySelector("#user-rate1");
+var restPhone1 = document.querySelector("#rest-phone1");
+var url2 = document.querySelector("#url2");
+var featImage1 = document.querySelector("#feat-img1");
+var restAddy1= document.querySelector("#rest-addy1");
 
 
 /* THIS IS THE ZOMATO API CALLBACK FUNCTION TO POPULATE THE PAGE */
 
-var showRest = function(search) {
-    if (search) {
-        //Rest Tile 1
-        restName1.textContent = search[0].name;
-    
-    }
-};
+var tiles = document.querySelector("#tile-1");
+var restaurants = data.restaurants;
 
+if (restaurants.length > 0) {
+
+    for (var i = 0; i < tiles.length; i++) {
+        var tile = tiles[i]; // This is the current tile
+            restaurants = restaurants[i].restaurant; // This is the restaurant object from the API
+
+        tile.querySelector("p.title").innerText = restaurant.name;
+    }
+}
 
 
 
