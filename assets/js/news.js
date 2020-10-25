@@ -44,57 +44,27 @@ var api =  "feec356023msh7d505f582747ea5p199c91jsnd5a1909fc40a";
 var ticketMasterApi = "EI6xvZtsgVpRYLMPIJKeFhxH3ma5tsgl";
 
 
-var displayArticle = function(search_term) {
+var displayArticle = function(search_term, articleSelector, titleSelector, contentSelector, urlSelector, imageSelector) {
     if (search_term) {
         //news box 1
-        newsArticle1.textContent = search_term[0].category;
-        newsTitle1.textContent = search_term[0].title;
-        newsContent1.textContent = search_term[0].content.slice(0,100) + ".....";
-        url1.setAttribute("href", search_term[0].source_url);
-        url1.setAttribute("target", "_blank");
-        image1.setAttribute("src", search_term[0].img);
+        articleSelector.textContent = search_term.value[0].category;
+        titleSelector.textContent = search_term.value[0].name;
+        contentSelector.textContent = search_term.value[0].description.slice(0,100) + ".....";
+        urlSelector.setAttribute("href", search_term.value[0].url);
+        urlSelector.setAttribute("target", "_blank");
+        
+        if (search_term.value[0].category) {
+        getImages(imageSelector, search_term.value[0].category);
+        console.log(search_term.value[0]);
+        }
 
-        //news box 2
-        newsArticle2.textContent = search_term[1].category;
-        newsTitle2.textContent = search_term[1].title;
-        newsContent2.textContent = search_term[1].content.slice(0,100) + ".....";
-        url2.setAttribute("href", search_term[1].source_url);
-        url2.setAttribute("target", "_blank");
-        image2.setAttribute("src", search_term[1].img);
-
-        //news box 3
-        newsArticle3.textContent = search_term[2].category;
-        newsTitle3.textContent = search_term[2].title;
-        newsContent3.textContent = search_term[2].content.slice(0,100) + ".....";
-        url3.setAttribute("href", search_term[2].source_url);
-        url3.setAttribute("target", "_blank");
-        image3.setAttribute("src", search_term[2].img);
-
-        //news box 4
-        newsArticle4.textContent = search_term[3].category;
-        newsTitle4.textContent = search_term[3].title;
-        newsContent4.textContent = search_term[3].content.slice(0,100) + ".....";
-        url4.setAttribute("href", search_term[3].source_url);
-        url4.setAttribute("target", "_blank");
-        image4.setAttribute("src", search_term[3].img);
-
-        //news box 5
-        newsArticle5.textContent = search_term[4].category;
-        newsTitle5.textContent = search_term[4].title;
-        newsContent5.textContent = search_term[4].content.slice(0,100) + ".....";
-        url5.setAttribute("href", search_term[4].source_url);
-        url5.setAttribute("target", "_blank");
-        image5.setAttribute("src", search_term[4].img);
-
-        //news box 6
-        newsArticle6.textContent = search_term[5].category;
-        newsTitle6.textContent = search_term[5].title;
-        newsContent6.textContent = search_term[5].content.slice(0,100) + ".....";
-        url6.setAttribute("href", search_term[5].source_url);
-        url6.setAttribute("target", "_blank");
-        image6.setAttribute("src", search_term[5].img);
+        else {
+            getImages(imageSelector, search_term.value[0].about[0].name);   
+        }
+        
     }
 };
+
 
 var displayHighlight = function(search_term) {
     if (search_term) {
@@ -105,10 +75,12 @@ var displayHighlight = function(search_term) {
         highlight2.textContent = search_term[1].title;
         highlight2.setAttribute("href", search_term[1].source_url);
         highlight2.setAttribute("target", "_blank");
+        console.log(highlight2);
 
         highlight3.textContent = search_term[2].title;
         highlight3.setAttribute("href", search_term[2].source_url);
         highlight3.setAttribute("target", "_blank");
+        console.log(highlight3.textContent);
 
         highlight4.textContent = search_term[3].title;
         highlight4.setAttribute("href", search_term[3].source_url);
@@ -116,40 +88,70 @@ var displayHighlight = function(search_term) {
     }
 };
 
-var getNews = function() {
-    var apiUrl = fetch("https://rapidapi.p.rapidapi.com/apirapid/news/world/?q=news", {
+var displayImages = function(imageLoc, search_term) {
+    if (search_term) {
+    
+        imageLoc.setAttribute("src", search_term.value[0].thumbnailUrl);
+        
+
+    }
+};
+
+var getImages = function(imageVar, search_term) {
+    var apiImages = fetch("https://rapidapi.p.rapidapi.com/images/search?q="+search_term, {
         "method": "GET",
         "headers": {
-            "x-rapidapi-host": "newscafapi.p.rapidapi.com",
-            "x-rapidapi-key": api
+            "x-rapidapi-host": "bing-image-search1.p.rapidapi.com",
+            "x-rapidapi-key": "feec356023msh7d505f582747ea5p199c91jsnd5a1909fc40a"
         }
     })
 
-    var apiUrl2 = fetch("https://rapidapi.p.rapidapi.com/apirapid/news/?q=news", {
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "newscafapi.p.rapidapi.com",
-            "x-rapidapi-key": api
-        }
-    })
-
-    apiUrl.then(function(response) {
+    apiImages.then(function(response) {
         if(response.ok) {
            response.json().then(function(data) {
-               console.log(data);
-               displayArticle(data);
+               displayImages(imageVar, data);
            })
+        }
+    })
+   
+};
+
+var getHighlights = function(search_term) {
+    var apiUrl2 = fetch("https://rapidapi.p.rapidapi.com/apirapid/news/?q="+search_term, {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "newscafapi.p.rapidapi.com",
+            "x-rapidapi-key": api
         }
     })
 
     apiUrl2.then(function(response) {
         if(response.ok) {
            response.json().then(function(data) {
-               console.log(data);
                displayHighlight(data);
            })
         }
     })
+};
+
+var getNews = function(search_term1, articleSelector, titleSelector, contentSelector, urlSelector, imageSelector) {
+    var apiUrl = fetch("https://rapidapi.p.rapidapi.com/search?q="+search_term1, {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "microsoft-azure-bing-news-search-v1.p.rapidapi.com",
+            "x-rapidapi-key": "feec356023msh7d505f582747ea5p199c91jsnd5a1909fc40a"
+        }
+    })
+
+    apiUrl.then(function(response) {
+        if(response.ok) {
+           response.json().then(function(data) {
+               console.log("news", data);
+               displayArticle(data, articleSelector, titleSelector, contentSelector, urlSelector, imageSelector);
+           })
+        }
+    })
+
 };
 
 // fetch("https://developers.zomato.com/api/v2.1/categories", {
@@ -162,5 +164,13 @@ var getNews = function() {
 //     })
 // });
 
-getNews();
+getHighlights("US elections");
+
+getNews("covid", newsArticle1, newsTitle1, newsContent1, url1, image1);
+getNews("politics", newsArticle2, newsTitle2, newsContent2, url2, image2);
+getNews("economy", newsArticle3, newsTitle3, newsContent3, url3, image3);
+getNews("Sports", newsArticle4, newsTitle4, newsContent4, url4, image4);
+getNews("China", newsArticle5, newsTitle5, newsContent5, url5, image5);
+getNews("Health", newsArticle6, newsTitle6, newsContent6, url6, image6);
+
 
