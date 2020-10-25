@@ -1,6 +1,24 @@
 var search = document.querySelector('#cuisine-search');
 var searchBtnEl = document.querySelector('#search-form');
 
+var restName1
+var rate1 
+var phone1
+var img1
+
+
+/* THIS IS THE ZOMATO API CALLBACK FUNCTION TO POPULATE THE PAGE */
+
+var showRest = function(search) {
+    if (search) {
+        //Rest Tile 1
+        restName1.textContent = search[0].name;
+    
+    }
+};
+
+
+
 
 
 var loadCuisines = function(searchTerm) {
