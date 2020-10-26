@@ -8,6 +8,8 @@
     <title>Movies Playing</title>
     <script src="https://kit.fontawesome.com/15181efa86.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="assets/js/script.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
     <link rel="stylesheet" href="assets/css/style.css"/>
@@ -29,17 +31,7 @@
               <a class="navbar-item" href="news.html">
                 News
               </a>
-              <a class="navbar-item" href="covid_activity.html">
-                Covid Activity
-              </a>
-              <a class="navbar-item" href="contact.html">
-                Contact
-              </a>
-              <a class="navbar-item" href="register.html">
-                Register
-              </a>
-              <a class="navbar-item" href="help.html">
-                Help
+             
               </a>
             </div>
           </div>
@@ -47,7 +39,7 @@
       </div>
     </div>
     <div class="hero-body">
-      <h1 class="subtitle has-text-centered bold" >
+      <h1 class="title has-text-centered" >
         Check Out Whats Playing!
       </h1>
       <div class="container has-text-centered">
@@ -67,13 +59,14 @@
                       <p class="title">
                         Movies Playing Now
                       </p>
-                      <ul id="content"></ul>
+                      <ul id="content" onclick></ul>
                     </div> 
                 </div>
                 <div class="card column is-6 featured-content ">
                   <div>
                     <h1 class="title post-title">Cinemas Near By:<span id="moive-search-term"></span></h1>
                     <div class="movie-container" class="list-group">
+                      
                       <ul id="cinemas" class="list">
   
                       </ul>
@@ -83,17 +76,11 @@
               </article>
             </div>
               <hr>
-            <div class="column is-12">
-              <div class="column is-6">
-                 <form id="searchform">
-                  <label class="movie-label" for="movie-search">Movie Name</label>
-                  <input class="input is-rounded" id="movie-search" type="text" placeholder="Search Movie">
-                  <button class="button is-primary" type="submit">Submit</button>
-                 </form> 
-              </div>
+           
               <div class="columns is-multiline">
-                <div class="column is-6 featured-content va">
-                <ul id="showtimes"></ul>
+                <div class="column is-12 featured-content va">
+                  <h1 class="title">Show Times:</h2>
+                <div id="showtimes"></div>
                 </div>
               </div>
             </div>
@@ -101,14 +88,33 @@
         </div>
       </div>
     </div>
+  </section>
+   
+    <!-- <div id="floating-panel">
+      <input id="latlng" type="text" />
+      <input id="submit" type="button" value="Reverse Geocode" />
+    </div>
+    <div id="map">
+    
+    </div>
+    <button id="mapbtn">Try It</button>
+    <div>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184552.57290127792!2d-79.51814281859359!3d43.718155660880214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON!5e0!3m2!1sen!2sca!4v1600294752827!5m2!1sen!2sca" width="600" height="650" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> --> -->
+    <!-- </div> 
+
+
+    <p id="map2"></p>
 
    
 
-  </section>
+  
+  <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
+  defer
+></script> -->
+ 
 
 
 
 
-
-
-  <!-- Moviglu api trailers, now showing film search  -->
+  
